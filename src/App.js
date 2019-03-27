@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Courses from './containers/Courses/Courses';
 import Users from './containers/Users/Users';
 import { Route, BrowserRouter, Link, Switch } from 'react-router-dom'
+import Course from './containers/Course/Course';
 
 class App extends Component {
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
               return <h1>Home Page</h1>
             }}/>
             <Route path="/courses" exact component={Courses}></Route>
+            <Route path="/courses/:id" exact component={Course}></Route>
             <Route path="/users" exact component={Users}></Route>
 
             <Route render={() => {
